@@ -10,3 +10,5 @@ This project is from the Day 8 code along video from Udemy's 50 projects in 50 d
 
 ### Things Learned
 
+* Transparent is a color
+* inline-block acts like an inline element, but allows height, width, margins, padding to be set

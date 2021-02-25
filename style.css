@@ -1,22 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 * {
-    /* width not affected by padding or border */
-    box-sizing: border-box;
+  /* width not affected by padding or border */
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    /* Centered horizontally */
-    align-items: center; 
-    /* Centered vertically on 100% viewport */
-    justify-content: center;
-    /* 100% viewport height  */
-    height: 100vh;
-    /* don't want scrollbars  */
-    overflow: hidden;
-    /* no margins  */
-    margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: steelblue;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* Centered horizontally */
+  align-items: center;
+  /* Centered vertically on 100% viewport */
+  justify-content: center;
+  /* 100% viewport height  */
+  height: 100vh;
+  /* don't want scrollbars  */
+  overflow: hidden;
+  /* no margins  */
+  margin: 0;
+}
+
+/* div with container class */
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* 20px top/bottom, 40px sides */
+  padding: 20px 40px;
+  /* lightly rounded corners */
+  border-radius: 5px;
+}
+
+/* h1 inside container */
+.container h1 {
+  /* centers text */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* link in container */
+.container a {
+  /* remove underline */
+  text-decoration: none;
+  color: lightblue;
+}
+
+/* btn class  */
+.btn {
+  /* cursor changes to pointer when hovering */
+  cursor: pointer;
+  /* acts as inline, but can set height, width */
+  display: inline-block;
+  /* full width */
+  width: 100%;
+  background-color: lightblue;
+  /* 15px all around  */
+  padding: 15px;
+  /* same font as parent element */
+  font-family: inherit;
+  font-size: 16px;
+  /* remove border */
+  border: 0;
+  /* lightly rounded corners */
+  border-radius: 5px;
+}
+
+/* when button is focused */
+.btn:focus {
+    /* remove border */
+    outline: 0;
+}
+
+/* when button clicked */
+.btn:active {
+    /* reduces size to 98% */
+    transform: scale(0.98);
+}
+
+/* p with text class */
+.text {
+    /* 30px space above */
+    margin-top: 30px;
+}
+
+/* div with form-control class */
+.form-control {
+  /* so we can position children absolute */
+  position: relative;
+  /* 20px top, 0 sides, 40px bottom */
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+/* input box in form-control */
+.form-control input {
+  /* remove color */
+  background-color: transparent;
+  /* remove outline of form box */
+  border: 0;
+  /* 2px white border on bottom */
+  border-bottom: 2px #fff solid;
+  /* puts it on its own line */
+  display: block;
+  /* full width */
+  width: 100%;
+  /* 15px top/bottom, 0 sides */
+  padding: 15px 0;
+  font-size: 18px;
+  /* color inside input box */
+  color: #fff;
+}
+
+/* input box in form-control when focused or valid*/
+.form-control input:focus,
+.form-control input:valid {
+  /* removes border */
+  outline: 0;
 }
