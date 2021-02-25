@@ -50,7 +50,7 @@ body {
 .btn {
   /* cursor changes to pointer when hovering */
   cursor: pointer;
-  /* acts as inline, but can set height, width */
+  /* acts as inline, but can set height, width, margins, padding */
   display: inline-block;
   /* full width */
   width: 100%;
@@ -68,20 +68,20 @@ body {
 
 /* when button is focused */
 .btn:focus {
-    /* remove border */
-    outline: 0;
+  /* remove border */
+  outline: 0;
 }
 
 /* when button clicked */
 .btn:active {
-    /* reduces size to 98% */
-    transform: scale(0.98);
+  /* reduces size to 98% */
+  transform: scale(0.98);
 }
 
 /* p with text class */
 .text {
-    /* 30px space above */
-    margin-top: 30px;
+  /* 30px space above */
+  margin-top: 30px;
 }
 
 /* div with form-control class */
@@ -117,4 +117,37 @@ body {
 .form-control input:valid {
   /* removes border */
   outline: 0;
+  /* light blue border just on bottom */
+  border-bottom-color: lightblue;
+}
+
+/* labels in form */
+.form-control label {
+  /* can set position w/ top right bottom left */
+  position: absolute;
+  /* 15px from top */
+  top: 15px;
+  /* flush with left side */
+  left: 0;
+}
+
+/* span (created in JS) in label in form-control */
+.form-control label span {
+  /* acts as inline, but can set height, width, margins, padding */
+  display: inline-block;
+  /* each letter 18px */
+  font-size: 18px;
+  /* each letter width of at least 5px */
+  min-width: 5px;
+    /* transition for transform  */
+    /* cubic-bezier defines curve which will be variable transition speed */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* target span in label when form-control is focused or valid */
+.form-control input:focus + label span, .form-control input:valid + label span {
+    color: lightblue;
+    /* move up 30px */
+    transform: translateY(-30px);
+
 }
